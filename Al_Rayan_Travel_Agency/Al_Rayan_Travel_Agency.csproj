@@ -270,7 +270,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Assets\Configurations\app.config" />
-    <None Include="Assets\Databases\alrayan.mysql" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -282,8 +281,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Databases\rtt.sql" />
-    <Content Include="Assets\Databases\trtt.sql" />
+    <Content Include="Assets\Databases\Dump20160721.sql" />
+    <Content Include="Assets\Databases\Query1.sql" />
+    <Content Include="Assets\Databases\Query2.sql" />
     <Content Include="XPanderControl.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
