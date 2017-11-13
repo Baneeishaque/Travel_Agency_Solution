@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69F5E5AC-8FC6-4B59-86D1-ECD404FEF09B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Al_Rayan_Travel_Agency</RootNamespace>
+    <AssemblyName>Al_Rayan_Travel_Agency</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPanderControl">
+      <HintPath>.\XPanderControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codes\Common_Tasks.cs" />
+    <Compile Include="Codes\DB_Handler\MySQL_DB_Handler.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Clients\MySQL_Money_Client_DL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Clients\MySQL_Money_Client_GL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Exchange_Rate\MySQL_Exchange_Rate_DL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Exchange_Rate\MySQL_Exchange_Rate_GL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Receive_Money\MySQL_Receive_Money_DL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Receive_Money\MySQL_Receive_Money_GL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Send_Money\MySQL_Send_Money_DL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Send_Money\MySQL_Send_Money_GL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Clients\MySQL_Money_Clients_DL.cs" />
+    <Compile Include="Codes\MySQL\Money_Exchange\Send_Money\Send_Money_DL.cs" />
+    <Compile Include="Codes\MySQL\MySQL_Collection_DL.cs" />
+    <Compile Include="Codes\MySQL\MySQL_Login_DL.cs" />
+    <Compile Include="Codes\MySQL\Travels\MySQL_Travel_Clients_DL.cs" />
+    <Compile Include="Codes\MySQL\Travels\MySQL_Ticket_One_DL.cs" />
+    <Compile Include="Codes\MySQL\Travels\MySQL_Ticket_One_GL.cs" />
+    <Compile Include="Codes\MySQL\Travels\MySQL_Vissa_DL.cs" />
+    <Compile Include="Codes\MySQL\Travels\MySQL_Vissa_GL.cs" />
+    <Compile Include="Codes\Sqlconnector.cs" />
+    <Compile Include="Forms\About_Us.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About_Us.designer.cs">
+      <DependentUpon>About_Us.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Collection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Collection.Designer.cs">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Exchange_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Exchange_Home.Designer.cs">
+      <DependentUpon>Exchange_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Money_Exchange_Common.cs" />
+    <Compile Include="Forms\Money_Exchange\Receive_Money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Receive_Money.Designer.cs">
+      <DependentUpon>Receive_Money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Send_Money\Balance_Sheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Send_Money\Balance_Sheet.Designer.cs">
+      <DependentUpon>Balance_Sheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Send_Money\Send_Money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Send_Money\Send_Money.Designer.cs">
+      <DependentUpon>Send_Money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Vehicle_Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Vehicle_Summary.Designer.cs">
+      <DependentUpon>Vehicle_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profit.Designer.cs">
+      <DependentUpon>Profit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Set_Rate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Set_Rate.Designer.cs">
+      <DependentUpon>Set_Rate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Travels\Clients\Travel_Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Travels\Clients\Travel_Clients.Designer.cs">
+      <DependentUpon>Travel_Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Travels\Clients\Travel_Client_Addition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Travels\Clients\Travel_Client_Addition.Designer.cs">
+      <DependentUpon>Travel_Client_Addition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Travels\Ticket_Isuue_One_Way.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Travels\Ticket_Isuue_One_Way.Designer.cs">
+      <DependentUpon>Ticket_Isuue_One_Way.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Codes\MySQL\Travels\Travels_Common.cs" />
+    <Compile Include="Forms\Travels\Travels_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Travels\Travels_Home.Designer.cs">
+      <DependentUpon>Travels_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Clients\Money_Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Clients\Money_Clients.Designer.cs">
+      <DependentUpon>Money_Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Clients\Money_Client_Addition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Money_Exchange\Clients\Money_Client_Addition.Designer.cs">
+      <DependentUpon>Money_Client_Addition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Travels\Visa_Issue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Travels\Visa_Issue.Designer.cs">
+      <DependentUpon>Visa_Issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\About_Us.resx">
+      <DependentUpon>About_Us.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Collection.resx">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Exchange_Home.resx">
+      <DependentUpon>Exchange_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Receive_Money.resx">
+      <DependentUpon>Receive_Money.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Send_Money\Balance_Sheet.resx">
+      <DependentUpon>Balance_Sheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Send_Money\Send_Money.resx">
+      <DependentUpon>Send_Money.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Vehicle_Summary.resx">
+      <DependentUpon>Vehicle_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profit.resx">
+      <DependentUpon>Profit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Set_Rate.resx">
+      <DependentUpon>Set_Rate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Travels\Clients\Travel_Clients.resx">
+      <DependentUpon>Travel_Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Travels\Clients\Travel_Client_Addition.resx">
+      <DependentUpon>Travel_Client_Addition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Travels\Ticket_Isuue_One_Way.resx">
+      <DependentUpon>Ticket_Isuue_One_Way.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Travels\Travels_Home.resx">
+      <DependentUpon>Travels_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Clients\Money_Clients.resx">
+      <DependentUpon>Money_Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Money_Exchange\Clients\Money_Client_Addition.resx">
+      <DependentUpon>Money_Client_Addition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Travels\Visa_Issue.resx">
+      <DependentUpon>Visa_Issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Assets\Configurations\app.config" />
+    <None Include="Assets\Databases\alrayan.mysql" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Databases\rtt.sql" />
+    <Content Include="Assets\Databases\trtt.sql" />
+    <Content Include="XPanderControl.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
